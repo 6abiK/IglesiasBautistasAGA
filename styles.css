@@ -1,0 +1,488 @@
+/* Variables de la paleta de colores solicitada */
+:root {
+    --primary-orange: #ff8040;
+    --primary-burgundy: #800c40;
+    --primary-pink: #ff80bf;
+    --bg-light: #fffafb;
+    --text-dark: #2c2c2c;
+    --text-muted: #555555;
+    --white: #ffffff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header & Navegación */
+.header {
+    background-color: var(--primary-burgundy);
+    color: var(--white);
+    padding: 1rem 0;
+    /* Eliminamos position: sticky y top: 0 para que ruede junto con la página */
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.logo-wrapper {
+    background-color: var(--white);
+    padding: 6px;
+    border-radius: 50%; /* Le da forma circular al fondo del logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--primary-pink); /* Borde fino para integrarlo con la paleta */
+}
+
+.logo-img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-pink);
+}
+
+/* Secciones Generales */
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-orange);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Sección Sobre Nosotros */
+.hero-section {
+    background: linear-gradient(135deg, rgba(255, 128, 191, 0.15) 0%, rgba(255, 128, 64, 0.1) 100%);
+}
+
+.hero-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary-orange);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero-card h2 {
+    color: var(--primary-burgundy);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.hero-card p {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.comision-link-text {
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.comision-link-text .highlight-link {
+    color: var(--primary-burgundy);
+    text-decoration: solid;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.comision-link-text .highlight-link:hover {
+    color: var(--primary-orange);
+}
+
+/* Sección Departamentos */
+.dept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.dept-card {
+    background-color: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 128, 191, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dept-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(128, 12, 64, 0.12);
+}
+
+.dept-icon {
+    font-size: 2.5rem;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.dept-card h3 {
+    color: var(--primary-burgundy);
+    margin-bottom: 0.8rem;
+}
+
+.placeholder-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Sección ITBM */
+.itbm-section {
+    background-color: var(--primary-burgundy);
+    color: var(--white);
+}
+
+.info-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.itbm-section h2 {
+    font-size: 2.2rem;
+    color: var(--primary-pink);
+}
+
+.subtitle {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.itbm-section .placeholder-text {
+    color: #ffd6e8;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #e66f33;
+    transform: scale(1.03);
+}
+
+.btn-accent {
+    background-color: var(--primary-burgundy);
+    color: var(--white);
+}
+
+.btn-accent:hover {
+    background-color: #630931;
+    transform: scale(1.03);
+}
+
+/* Sección Revista */
+/* Estilos para la Estantería Digital de Revistas */
+.magazine-intro {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+/* Estilos para la Estantería Digital en Fila Única */
+.magazine-intro {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Fila horizontal con scroll deslizante */
+.magazine-row {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+/* Estilo personalizado para la barra de desplazamiento (opcional y estético) */
+.magazine-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.magazine-row::-webkit-scrollbar-track {
+    background: rgba(255, 128, 191, 0.15);
+    border-radius: 4px;
+}
+
+.magazine-row::-webkit-scrollbar-thumb {
+    background: var(--primary-pink);
+    border-radius: 4px;
+}
+
+.magazine-row::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-orange);
+}
+
+.magazine-card {
+    flex: 0 0 300px; /* Ancho fijo para cada revista en la fila */
+    scroll-snap-align: start;
+    background-color: var(--white);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 128, 191, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.magazine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(128, 12, 64, 0.12);
+}
+
+.magazine-card h3 {
+    color: var(--primary-burgundy);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Contenedor responsivo para el visor de Heyzine */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a020d;
+    color: #e0e0e0;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* Estilos específicos para la sección Comisión */
+.subsection-title {
+    color: var(--primary-burgundy);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: 2px solid var(--primary-pink);
+    padding-bottom: 0.5rem;
+}
+
+/* Grilla para fotos de la Comisión Directiva */
+.directiva-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.directiva-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 128, 191, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.directiva-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(128, 12, 64, 0.12);
+}
+
+.member-img-container {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Fuerza la proporción exactas de 1192x1589 */
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.member-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.member-info {
+    padding: 1rem 0.8rem;
+}
+
+.member-info h4 {
+    color: var(--primary-burgundy);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.role-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--primary-orange);
+    font-weight: 600;
+}
+
+/* Grilla para las listas de texto */
+.margin-top-lg {
+    margin-top: 3.5rem;
+}
+
+.listas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-orange);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.info-card h4 {
+    color: var(--primary-burgundy);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.span-full {
+    grid-column: 1 / -1;
+}
+
+.subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.subgrid p {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
