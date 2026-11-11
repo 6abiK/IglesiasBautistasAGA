@@ -199,6 +199,17 @@ body {
     font-style: italic;
 }
 
+/* Estilo para los enlaces en los títulos de los departamentos */
+.dept-link {
+    color: inherit;            /* Mantiene el color borgoña del título h3 */
+    text-decoration: none;     /* Elimina el subrayado por defecto */
+    transition: color 0.3s ease;
+}
+
+.dept-link:hover {
+    color: var(--primary-orange); /* Cambia al color naranja al pasar el cursor para dar interactividad */
+}
+
 /* Sección ITBM */
 .itbm-section {
     background-color: var(--primary-burgundy);
