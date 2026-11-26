@@ -163,7 +163,7 @@ body {
 /* Sección Departamentos */
 .dept-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -379,6 +379,11 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+    
+    .dept-grid {
+        grid-template-columns: 1fr;
+    }
+}
 }
 /* Estilos específicos para la sección Comisión */
 .subsection-title {
