@@ -91,6 +91,21 @@ html {
     display: block;
 }
 
+.itbm-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.itbm-section-logo {
+    max-width: 300px; 
+    width: auto;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+    display: block;
+
 .site-title {
     font-size: 1.25rem;
     font-weight: 600;
