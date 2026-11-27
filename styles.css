@@ -73,9 +73,20 @@ html {
     border: 2px solid var(--primary-pink); /* Borde fino para integrarlo con la paleta */
 }
 
-.logo-img {
-    height: 48px;
-    width: 48px;
+.itbm-logo-pill {
+    background-color: var(--itbm-white);
+    padding: 6px 10px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.itbm-logo-img {
+    height: 46px;
+    width: auto;
+    max-width: 220px;
     object-fit: contain;
     display: block;
 }
@@ -374,6 +385,11 @@ html {
 
 /* Responsivo para móviles */
 @media (max-width: 768px) {
+    .itbm-logo-img {
+        height: 38px;
+        max-width: 170px;
+    }
+
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -387,7 +403,6 @@ html {
     .dept-grid {
         grid-template-columns: 1fr;
     }
-}
 }
 /* Estilos específicos para la sección Comisión */
 .subsection-title {
@@ -490,6 +505,29 @@ html {
 .info-card li {
     margin-bottom: 0.6rem;
     font-size: 0.95rem;
+}
+
+.itbm-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.itbm-section-logo {
+    max-width: 300px; 
+    width: auto;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .itbm-section-logo {
+        max-width: 85px;
+        max-height: 85px;
+    }
 }
 
 .span-full {

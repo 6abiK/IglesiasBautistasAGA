@@ -1,0 +1,480 @@
+/* ==========================================================================
+   Estilos para ITBM - Instituto Teológico Bautista de Misiones
+   Paleta extraída de las piezas gráficas oficiales + Efecto Pastilla (Pill)
+   ========================================================================== */
+
+:root {
+    --itbm-navy: #0c3559;
+    --itbm-navy-dark: #07223a;
+    --itbm-blue: #1565c0;
+    --itbm-blue-hover: #0d47a1;
+    --itbm-sky: #e8f1fa;
+    --itbm-bg: #ffffff;
+    --itbm-surface: #f7faff;
+    --itbm-border: #123c63;
+    --itbm-text: #0c3559;
+    --itbm-text-body: #1f3a52;
+    --itbm-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--itbm-bg);
+    color: var(--itbm-text-body);
+    line-height: 1.6;
+}
+
+.itbm-container {
+    width: 92%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Efecto Pastilla (Pill Badges & Pill Buttons)
+   -------------------------------------------------------------------------- */
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.55rem 1.4rem 0.55rem 0.65rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.98rem;
+    line-height: 1.25;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(12, 53, 89, 0.2);
+}
+
+.pill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-size: 0.95rem;
+}
+
+/* Variantes de pastilla según las imágenes */
+.pill-blue {
+    background-color: var(--itbm-blue);
+    color: var(--itbm-white);
+}
+
+.pill-blue .pill-icon {
+    background-color: var(--itbm-white);
+    color: var(--itbm-blue);
+}
+
+.pill-navy {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+    padding: 0.65rem 1.5rem;
+}
+
+.pill-light {
+    background-color: var(--itbm-white);
+    color: var(--itbm-navy);
+    box-shadow: 0 4px 14px rgba(7, 34, 58, 0.14);
+}
+
+.pill-light .pill-icon {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+}
+
+.pill-outline {
+    background-color: var(--itbm-white);
+    color: var(--itbm-navy);
+    border: 2px solid var(--itbm-navy);
+    padding: 0.6rem 1.4rem;
+}
+
+.pill-outline:hover {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+}
+
+/* --------------------------------------------------------------------------
+   Encabezado y Navegación
+   -------------------------------------------------------------------------- */
+.itbm-header {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+    padding: 0.9rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 14px rgba(7, 34, 58, 0.22);
+}
+
+.itbm-logo-img {
+    height: 46px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    display: block;
+}
+
+.itbm-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.itbm-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    text-decoration: none;
+    color: var(--itbm-white);
+}
+
+.itbm-logo-mark {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.itbm-logo-mark span {
+    font-weight: 400;
+}
+
+
+.itbm-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.itbm-nav a {
+    color: var(--itbm-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.45rem 0.95rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease;
+}
+
+.itbm-nav a:hover,
+.itbm-nav a.active {
+    background-color: var(--itbm-blue);
+}
+
+/* --------------------------------------------------------------------------
+   Hero / Preinscripción 2027
+   -------------------------------------------------------------------------- */
+.itbm-hero {
+    background: linear-gradient(180deg, var(--itbm-surface) 0%, var(--itbm-white) 100%);
+    padding: 3.5rem 0 4rem;
+    border-bottom: 1px solid var(--itbm-sky);
+}
+
+.itbm-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.itbm-hero h1 {
+    color: var(--itbm-navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 1rem;
+}
+
+.itbm-hero-lead {
+    font-size: 1.05rem;
+    color: var(--itbm-text-body);
+    margin-bottom: 1.5rem;
+}
+
+.itbm-pills-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+}
+
+.itbm-programs-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.itbm-hero-banner {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+    padding: 2.25rem 2rem;
+    border-radius: 28px;
+    box-shadow: 0 12px 28px rgba(12, 53, 89, 0.16);
+}
+
+.itbm-banner-quote {
+    border-left: 3px solid var(--itbm-white);
+    padding-left: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.itbm-banner-quote p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.itbm-banner-quote span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   Secciones y Títulos
+   -------------------------------------------------------------------------- */
+.itbm-section {
+    padding: 4rem 0;
+}
+
+.itbm-section-navy {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+}
+
+.itbm-section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.itbm-section-header h2 {
+    font-size: clamp(1.75rem, 3vw, 2.35rem);
+    font-weight: 800;
+    color: var(--itbm-navy);
+    margin-bottom: 0.4rem;
+}
+
+.itbm-section-navy .itbm-section-header h2 {
+    color: var(--itbm-white);
+}
+
+.itbm-section-header p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   Planes de Estudio (Bachiller en Teología & Ce.Fo.Li)
+   -------------------------------------------------------------------------- */
+.itbm-year-heading {
+    color: var(--itbm-navy);
+    font-size: 1.45rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 2.2rem 0 1.2rem;
+    text-align: center;
+}
+
+.itbm-section-navy .itbm-year-heading {
+    color: var(--itbm-white);
+}
+
+.itbm-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+}
+
+.itbm-plan-card {
+    border: 2.5px solid var(--itbm-border);
+    border-radius: 36px;
+    padding: 2rem;
+    background-color: var(--itbm-white);
+    color: var(--itbm-text-body);
+}
+
+.itbm-section-navy .itbm-plan-card {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.85);
+    color: var(--itbm-white);
+}
+
+.itbm-plan-card h3 {
+    text-align: center;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--itbm-navy);
+    margin-bottom: 1.1rem;
+    line-height: 1.2;
+}
+
+.itbm-section-navy .itbm-plan-card h3 {
+    color: var(--itbm-white);
+}
+
+.itbm-plan-list {
+    list-style: disc;
+    padding-left: 1.35rem;
+}
+
+.itbm-plan-list li {
+    margin-bottom: 0.45rem;
+    font-size: 0.98rem;
+}
+
+/* --------------------------------------------------------------------------
+   Requisitos y Aranceles
+   -------------------------------------------------------------------------- */
+.itbm-info-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.itbm-req-box {
+    background-color: var(--itbm-navy);
+    color: var(--itbm-white);
+    border-radius: 28px;
+    padding: 2.25rem;
+}
+
+.itbm-req-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.itbm-req-box ul {
+    list-style: disc;
+    padding-left: 1.35rem;
+}
+
+.itbm-req-box li {
+    font-size: 1.05rem;
+    margin-bottom: 0.65rem;
+}
+
+.itbm-aranceles-card {
+    background-color: var(--itbm-surface);
+    border: 2px solid var(--itbm-sky);
+    border-radius: 28px;
+    padding: 2.25rem;
+    text-align: center;
+}
+
+.itbm-aranceles-card h2 {
+    color: var(--itbm-navy);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.itbm-arancel-item {
+    margin-bottom: 1.5rem;
+}
+
+.itbm-arancel-item span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--itbm-navy);
+}
+
+.itbm-arancel-price {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--itbm-blue);
+    margin-top: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Pie de Página / Contacto en Pastillas
+   -------------------------------------------------------------------------- */
+.itbm-footer {
+    background-color: var(--itbm-navy-dark);
+    color: var(--itbm-white);
+    padding: 2rem 0;
+}
+
+.itbm-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.itbm-contact-pills {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.itbm-footer-copy {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   Responsivo
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .itbm-hero-grid,
+    .itbm-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .itbm-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .itbm-header-inner,
+    .itbm-footer-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pill {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.15rem 0.5rem 0.55rem;
+    }
+}
+@media (max-width: 768px) {
+    .itbm-logo-img {
+        height: 38px;
+        max-width: 170px;
+    }
+}
